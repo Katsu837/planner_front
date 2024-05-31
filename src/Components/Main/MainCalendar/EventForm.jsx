@@ -7,6 +7,7 @@ import {authFetch} from "../../../API/Fetchers.js";
 import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../../../store/date/state.slice.js";
 
+
 const EventForm = () => {
 
     const startDate = new Date()
@@ -16,7 +17,7 @@ const EventForm = () => {
 
     const handleSubmit = async (values) => {
         try {
-            const response = await authFetch('http://localhost:5100/event/createEvent', {
+            const response = await authFetch(import.meta.env.REACT_APP_BACK_URL + import.meta.env.REACT_APP_BACK_URL_CREATE_EVENT, {
                 eventName: values.name,
                 startTimeEvent: values.start_date,
                 endTimeEvent: values.end_date,

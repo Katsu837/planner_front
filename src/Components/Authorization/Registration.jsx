@@ -5,6 +5,8 @@ import {Field, Form, Formik} from "formik";
 import Input from "./Input.jsx";
 import {authFetch} from "../../API/Fetchers.js";
 import {useNavigate} from "react-router-dom";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const Registration = () => {
     let navigate = useNavigate();
@@ -14,7 +16,8 @@ const Registration = () => {
     }, []);
     const handleSubmit = async (values) => {
         try {
-            const response = await authFetch('http://localhost:5100/authorization/registration', {
+            // eslint-disable-next-line no-undef
+            const response = await authFetch(import.meta.env.REACT_APP_BACK_URL + import.meta.env.REACT_APP_BACK_URL_REGISTRATION, {
                 firstName: values.firstName,
                 secondName: values.secondName,
                 email: values.email,

@@ -2,17 +2,18 @@ import React from 'react';
 import style from "./authorization.module.css"
 import {Field, Form, Formik} from "formik";
 import {authFetch} from "../../API/Fetchers.js";
-import {redirect, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Input from "./Input.jsx";
 import * as Yup from 'yup';
-
+import * as dotenv from "dotenv";
+dotenv.config();
 const Login = () => {
 
     const navigate = useNavigate()
     const handleSubmit = async (values) => {
         try {
             console.log(values)
-            const response = await authFetch('http://localhost:5100/authorization/login', values)
+            const response = await authFetch(import.meta.env.BACK_URL + import.meta.env.BACK_URL_LOGIN, values)
             localStorage.setItem('token', response.accessToken)
             localStorage.setItem('id', response.id)
             localStorage.setItem('scheduleId', response.scheduleId)

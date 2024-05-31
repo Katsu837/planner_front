@@ -1,0 +1,61 @@
+.day {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 2px;
+    border: solid 1px transparent;
+    border-radius: 10px;
+}
+
+.firstLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 5px;
+}
+
+.trueDay {
+    border: solid 1px #BBBBBB;
+}
+
+.twoDays {
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.week {
+    /*grid-template-columns: 40px calc((100% - 110px) / 2) 50px;*/
+    /*grid-template-rows: 50px repeat(24, calc((100% - 70px) / 24 ));*/
+    width: calc(14.2857% - 10px);
+    padding: 0px 2px;
+}
+
+.twoWeek:nth-child(n) {
+    width: calc(14.2857% - 10px);
+    margin-top: 2px; /* Дополнительный отступ между строками */
+    height: calc(50% - 6px);
+}
+
+.month {
+    /*grid-template-columns: 40px calc((100% - 110px) / 2) 50px;*/
+    /*grid-template-rows: 50px repeat(24, calc((100% - 70px) / 24 ));*/
+    width: calc(14.2857% - 10px);
+}
+
+.marks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.hrContainer {
+    display: flex;
+    justify-content: start;
+    padding: 0px 0px 14px 0px
+}
+
+
+hr {
+    width: 98%;
+    border: dashed 0.7px;
+}

@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.eye {
+    padding: 0;
+    margin: 0;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    right: 10px;
+}
+.eye:hover {
+    border: none;
+}
+
+.myInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

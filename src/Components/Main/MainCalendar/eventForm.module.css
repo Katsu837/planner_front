@@ -1,0 +1,18 @@
+.eventForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #606060;
+    border-radius: 20px;
+    padding: 5px;
+    grid-row: 2/3;
+    grid-column: 8/10;
+    z-index: 1;
+    width: 250px;
+    height: 350px;
+    align-self: center;
+}
+
+.hide {
+    display: none;
+}

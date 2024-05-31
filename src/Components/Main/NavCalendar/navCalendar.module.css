@@ -1,0 +1,139 @@
+.nav_calendar {
+    display: grid;
+    grid-template-rows: 40px 25px 25px;
+    grid-row-gap: 5px;
+    background: gray;
+    border-radius: 20px;
+    padding: 10px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.month {
+   padding: 0 10px 0 10px;
+}
+
+.year {
+    display: none;
+}
+
+.month_year {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.days {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.dates {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.day {
+    color: white;
+    grid-row: 1/2;
+    min-width: 20px;
+    text-align: center;
+    padding: 4px;
+}
+
+.separator {
+    color: #CCCCCC;
+    font-size: 18pt;
+    grid-row: 2/3;
+    min-width: 2px;
+    text-align: center;
+    z-index: 1;
+    padding: 0px;
+}
+
+.date {
+    color: white;
+    min-width: 20px;
+    text-align: center;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.today {
+    background: #888888;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.date:hover {
+    background: #999999;
+    border-radius: 5px;
+}
+
+.nav_calendar:hover .year {
+    display: block;
+    -webkit-transition-duration: 3s;
+}
+
+.currentMonth {
+    padding: 0 10px 0 10px;
+    font-size: 14pt;
+}
+.anotherMonth {
+    color: #BBBBBB;
+    padding: 0 12px 0 12px;
+    font-size: 14pt;
+}
+
+.currentYear {
+    padding: 0 12px 0 12px;
+    font-size: 14pt;
+}
+.anotherYear {
+    color: #BBBBBB;
+    padding: 0 10px 0 10px;
+    font-size: 14pt;
+}
+.years {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.months {
+    grid-row: 2/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anotherMonth:hover {
+    background: #999999;
+    border-radius: 5px;
+}
+.currentMonth:hover {
+    background: #999999;
+    border-radius: 5px;
+}
+.currentYear:hover {
+    background: #999999;
+    border-radius: 5px;
+ }
+.anotherYear:hover {
+    background: #999999;
+    border-radius: 5px;
+}
+
+.tempYear {
+    background: #888888;
+    border-radius: 5px;
+}
+.tempMonth {
+    background: #888888;
+    border-radius: 5px;
+}

@@ -42,9 +42,7 @@ const router = createBrowserRouter([
       },
     ]
   }
-], {
-  basename: "/authorization/registration",
-})
+])
   return (
     <RouterProvider router={router}/>
   )
